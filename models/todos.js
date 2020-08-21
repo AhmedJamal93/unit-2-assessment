@@ -11,7 +11,13 @@ function create(todo){
   console.log(todos)
 }
 
+function deleteOne(id){
+  const idx = todos.findIndex(todo => todo.id === parseInt(id));
+  todos.splice(idx,1)
+}
+
 module.exports ={
   getAll:getAll,
   create:create,
+  deleteOne:deleteOne,
 }

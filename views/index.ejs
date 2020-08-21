@@ -12,6 +12,9 @@
       <ul>
         <% todos.forEach(function(t){ %>
         <li><%= t.todo %> - <%= t.done %>
+          <form action="/<%= t.id %>?_method=DELETE" method="POST">
+      <button type="submit">DELETE</button>
+    </form>
       </li>
         <% }); %>
       </ul>

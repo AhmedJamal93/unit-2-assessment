@@ -12,7 +12,13 @@ function create(req,res){
   res.redirect('/')
 }
 
+function deleteTodo(req, res){
+  Todos.deleteOne(req.params.id);
+  res.redirect('/');
+}
+
 module.exports = {
   index:index,
   create:create,
+  delete:deleteTodo,
 }
